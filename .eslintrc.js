@@ -8,10 +8,12 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
         'plugin:react/jsx-runtime',
+        'plugin:react-hooks/recommended',
         'plugin:sonarjs/recommended',
         'plugin:listeners/recommended',
+        'plugin:fp-ts/recommended',
+        'plugin:fp-ts/recommended-requiring-type-checking',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -20,6 +22,7 @@ module.exports = {
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
+        tsconfigRootDir: process.cwd(),
         project: './tsconfig.json',
     },
     plugins: [
@@ -29,6 +32,7 @@ module.exports = {
         'sonarjs',
         'unused-imports',
         'listeners',
+        'fp-ts',
     ],
     rules: {
         'no-unused-vars': 'off',
@@ -45,6 +49,7 @@ module.exports = {
         ],
         'sonarjs/cognitive-complexity': 'error',
         'sonarjs/cognitive-complexity': ['error', 15],
+        'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
     },
 }

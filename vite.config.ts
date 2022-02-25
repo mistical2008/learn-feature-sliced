@@ -8,6 +8,7 @@ export default defineConfig({
     resolve: {
         alias: [
             { find: 'src', replacement: path.resolve(process.cwd(), 'src') },
+            { find: '~', replacement: path.resolve(process.cwd()) },
         ],
     },
 })
