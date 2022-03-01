@@ -8,9 +8,9 @@ const NotFoundPage = lazy(() => import('./not-found'))
 export const Routing = () => {
     return (
         <Routes>
-            <Route path="test" element={<TestPage />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route key="test" path="test" element={<TestPage />} />
+            <Route key="root" path="/" element={<HomePage />} />
+            <Route key="other" path="*" element={<NotFoundPage />} />
         </Routes>
     )
 }

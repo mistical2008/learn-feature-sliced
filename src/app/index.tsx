@@ -1,6 +1,6 @@
 import './index.css'
-import { withProviders } from 'src/app/providers'
-import { Routing } from 'src/pages/routes'
+import { withProviders } from 'app/providers'
+import { Routing } from 'pages'
 
 function App() {
     return (
